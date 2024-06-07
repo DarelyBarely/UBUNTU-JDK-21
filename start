@@ -1,0 +1,13 @@
+pkg install wget openssl-tool proot -y && hash -r && wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/Installer/Ubuntu/ubuntu.sh && bash ubuntu.sh
+./ubuntu.sh
+apt update
+apt-get clean
+apt-get install -y build-essential
+apt-get install software-properties-common
+add-apt-repository ppa:openjdk-r/ppa
+apt-get update
+apt-get install openjdk-8-jre
+apt-get install openjdk-21-jdk
+https://api.papermc.io/v2/projects/paper/versions/1.20/builds/17/downloads/paper-1.20-17.jar
+mv paper-1.20-17.jar server.jar
+java -jar server.jar
